@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPlatform.ApiService"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPlatform.Web", "VirtualPlatform.Web\VirtualPlatform.Web.csproj", "{5BDBAE85-4CA3-4BFB-B3A5-BD18D9E7AF34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualPlatform.UserManagementService", "VirtualPlatform.UserManagementService\VirtualPlatform.UserManagementService.csproj", "{8AB3752B-232B-4532-A67B-1EAF3F0AAA86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{5BDBAE85-4CA3-4BFB-B3A5-BD18D9E7AF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BDBAE85-4CA3-4BFB-B3A5-BD18D9E7AF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BDBAE85-4CA3-4BFB-B3A5-BD18D9E7AF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB3752B-232B-4532-A67B-1EAF3F0AAA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB3752B-232B-4532-A67B-1EAF3F0AAA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB3752B-232B-4532-A67B-1EAF3F0AAA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB3752B-232B-4532-A67B-1EAF3F0AAA86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
