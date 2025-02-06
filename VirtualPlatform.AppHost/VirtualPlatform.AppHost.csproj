@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VirtualPlatform.ApiService\VirtualPlatform.ApiService.csproj" />
-    <ProjectReference Include="..\VirtualPlatform.UserManagmentService\VirtualPlatform.UserManagmentService.csproj" />
+    <ProjectReference Include="..\VirtualPlatform.UserManagementService\VirtualPlatform.UserManagementService.csproj" />
     <ProjectReference Include="..\VirtualPlatform.Web\VirtualPlatform.Web.csproj" />
   </ItemGroup>
 

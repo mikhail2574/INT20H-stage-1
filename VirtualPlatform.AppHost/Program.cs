@@ -10,7 +10,7 @@ var apiService = builder.AddProject<Projects.VirtualPlatform_ApiService>("apiser
     .WithReference(mongodb)
     .WaitFor(mongodb);
     
-var userManagmentService = builder.AddProject<Projects.VirtualPlatform_UserManagmentService>("userservice")
+var userManagmentService = builder.AddProject<Projects.VirtualPlatform_UserManagementService>("userservice")
     .WithReference(mongodb)
     .WaitFor(mongodb);
 
