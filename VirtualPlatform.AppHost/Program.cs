@@ -7,4 +7,12 @@ builder.AddProject<Projects.VirtualPlatform_Web>("webfrontend")
     .WithReference(apiService)
     .WaitFor(apiService);
 
+builder.AddViteApp("vite", "../VirtualPlatform.Frontend")
+    .WithYarnPackageInstallation()
+    .WithReference(apiService)
+    .WaitFor(apiService)
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints()
+    .PublishAsDockerFile();
+
 builder.Build().Run();
