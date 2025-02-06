@@ -1,5 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Mongo
+builder.AddMongoDBClient(connectionName: "mongodb");
+
 // Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
 
