@@ -9,11 +9,10 @@ var mongodb = mongo.AddDatabase("mongodb");
 var apiService = builder.AddProject<Projects.VirtualPlatform_ApiService>("apiservice")
     .WithReference(mongodb)
     .WaitFor(mongodb);
-
-builder.AddProject<Projects.VirtualPlatform_Web>("webfrontend")
-    .WithExternalHttpEndpoints()
-    .WithReference(apiService)
-    .WaitFor(apiService);
+    
+var userManagmentService = builder.AddProject<Projects.VirtualPlatform_UserManagementService>("userservice")
+    .WithReference(mongodb)
+    .WaitFor(mongodb);
 
 // builder.AddViteApp("vite", "../VirtualPlatform.Frontend")
 //     .WithYarnPackageInstallation()
