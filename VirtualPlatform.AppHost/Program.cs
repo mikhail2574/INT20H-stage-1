@@ -1,3 +1,5 @@
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
 var mongo = builder.AddMongoDB("mongo")
@@ -5,14 +7,22 @@ var mongo = builder.AddMongoDB("mongo")
 
 var mongodb = mongo.AddDatabase("mongodb");
 
+var rabbitmq = builder.AddRabbitMQ("messaging").WithManagementPlugin();
+builder.Services.AddSignalR()
+                .AddNamedAzureSignalR("signalr");
+
+
 
 var apiService = builder.AddProject<Projects.VirtualPlatform_ApiService>("apiservice")
     .WithReference(mongodb)
     .WaitFor(mongodb);
-    
-var userManagmentService = builder.AddProject<Projects.VirtualPlatform_UserManagementService>("userservice")
+
+var identityService = builder.AddProject<Projects.VirtualPlatform_Services_Identity_Api>("identity")
     .WithReference(mongodb)
-    .WaitFor(mongodb);
+    .WaitFor(mongodb)
+    .WithReference(rabbitmq)
+    .WaitFor(rabbitmq);
+
 
 // builder.AddViteApp("vite", "../VirtualPlatform.Frontend")
 //     .WithYarnPackageInstallation()
