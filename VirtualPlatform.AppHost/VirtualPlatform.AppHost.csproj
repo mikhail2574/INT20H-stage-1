@@ -13,14 +13,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VirtualPlatform.ApiService\VirtualPlatform.ApiService.csproj" />
-    <ProjectReference Include="..\VirtualPlatform.UserManagementService\VirtualPlatform.UserManagementService.csproj" />
     <ProjectReference Include="..\VirtualPlatform.Web\VirtualPlatform.Web.csproj" />
+    <ProjectReference Include="..\VirtualPlatform.Services.Identity.Api\VirtualPlatform.Services.Identity.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0" />
     <PackageReference Include="Aspire.Hosting.MongoDB" Version="9.0.0" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="9.0.0" />
     <PackageReference Include="CommunityToolkit.Aspire.Hosting.NodeJS.Extensions" Version="9.1.0" />
+    <PackageReference Include="Microsoft.Azure.SignalR" Version="1.30.0" />
   </ItemGroup>
 
 </Project>
